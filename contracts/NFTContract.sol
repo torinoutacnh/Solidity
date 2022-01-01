@@ -6,6 +6,8 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+
 import "./ERC721Holder.sol";
 
 contract NFTContract is ERC721URIStorage, ERC721Enumerable, ERC721Holder, Ownable   {
@@ -14,6 +16,7 @@ contract NFTContract is ERC721URIStorage, ERC721Enumerable, ERC721Holder, Ownabl
 
     event BalanceChange(address from,uint256 value,uint256 balance);
     event PaymentIn(address from, uint256 value);
+    event Response(bool success, bytes data);
     
     constructor() ERC721("BiNT", "ITM") {}
 
@@ -76,12 +79,31 @@ contract NFTContract is ERC721URIStorage, ERC721Enumerable, ERC721Holder, Ownabl
         return address(this).balance;
     }
     
-    function transfer(address from, address to, uint256 tokenId) 
+    function transferNFT(address from, address to, uint256 tokenId) 
         external 
         payable 
         returns(address toAddress)
     {
         _transfer(from, to, tokenId);
         return to;
+    }
+
+    function transferMoney(address payable to,uint256 amount) 
+        public 
+        payable 
+    {
+        //payable(to).transfer(SafeMath.add(msg.value,amount));
+        require(!(SafeMath.add(msg.value,amount) > 0),"Amount is not right");
+        require(balanceOf(msg.sender) > SafeMath.add(msg.value,amount),"Balance not enough");
+        require(to != address(0x0),"Input is not address");
+        require(to!=msg.sender);
+        (bool success, bytes memory data) = payable(to).call{value: SafeMath.add(msg.value,amount), gas: 5000}('');
+        emit Response(success, data);
+    }
+
+    function checkMoney(uint256 amount) 
+        public pure returns(uint256 total)
+    {
+        return SafeMath.add(0,amount);
     }
 }
