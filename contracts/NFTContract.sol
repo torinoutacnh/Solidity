@@ -88,22 +88,16 @@ contract NFTContract is ERC721URIStorage, ERC721Enumerable, ERC721Holder, Ownabl
         return to;
     }
 
-    function transferMoney(address payable to,uint256 amount) 
+    function transferMoney(address payable to) 
         public 
         payable 
     {
         //payable(to).transfer(SafeMath.add(msg.value,amount));
-        require(!(SafeMath.add(msg.value,amount) > 0),"Amount is not right");
-        require(balanceOf(msg.sender) > SafeMath.add(msg.value,amount),"Balance not enough");
+        require(0 < msg.value,"Amount is not right");
+        require(balanceOf(msg.sender) > msg.value,"Balance not enough");
         require(to != address(0x0),"Input is not address");
         require(to!=msg.sender);
-        (bool success, bytes memory data) = payable(to).call{value: SafeMath.add(msg.value,amount), gas: 5000}('');
+        (bool success, bytes memory data) = payable(to).call{value: msg.value, gas: 5000}('');
         emit Response(success, data);
-    }
-
-    function checkMoney(uint256 amount) 
-        public pure returns(uint256 total)
-    {
-        return SafeMath.add(0,amount);
     }
 }

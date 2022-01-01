@@ -249,25 +249,6 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "checkMoney",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "total",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
 						"name": "tokenId",
 						"type": "uint256"
 					}
@@ -616,11 +597,6 @@
 						"internalType": "address payable",
 						"name": "to",
 						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
 					}
 				],
 				"name": "transferMoney",
@@ -883,11 +859,11 @@
 			]
 		},
 		"contracts/NFTContract.sol": {
-			"keccak256": "0xe8fa0222ac6f89e0e4f1a6d307d934e4b89e115f5dba2dafdf7711f36509fe6a",
+			"keccak256": "0x8455d33a7fd72906ebece6bb5d458160f4507b0295b38c5caf61bf2126b48c01",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://eeaf24c77542cc7602133604d26ca9a19045be62f8313791d8998ee023588180",
-				"dweb:/ipfs/QmbuCjPX8fMawHkDy5LFWUfnhK2u97MDtQLrDtEeWWD8Ms"
+				"bzz-raw://38a1e8e0d63f10f2e86d3c9f1e6976f810872506d8f61eb67bc00d73204aa077",
+				"dweb:/ipfs/QmUbVkJzWKngoAXZukUfPDHWn5fPTbWDBEKtvLWq4wxBTN"
 			]
 		}
 	},
