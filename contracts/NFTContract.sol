@@ -3,14 +3,14 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 import "./ERC721Holder.sol";
 
-contract NFTContract is ERC721URIStorage, ERC721Enumerable, ERC721Holder, Ownable   {
+contract NFTContract is ERC721URIStorage, ERC721Enumerable, ERC721Holder, ReentrancyGuard, Ownable   {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
