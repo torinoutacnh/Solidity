@@ -55,7 +55,7 @@ contract marketPlaceBoilerPlate is ReentrancyGuard {
             _itemIds.increment();
             uint256 itemId = _itemIds.current();
   
-            idToMarketItem[itemId] =  MarketItem(
+            idToMarketItem[itemId] = MarketItem(
                 itemId,
                 nftContract,
                 tokenId,

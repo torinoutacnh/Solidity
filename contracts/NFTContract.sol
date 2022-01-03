@@ -18,7 +18,7 @@ contract NFTContract is ERC721URIStorage, ERC721Enumerable, ERC721Holder, Reentr
     event PaymentIn(address from, uint256 value);
     event Response(bool success, bytes data);
     
-    constructor() ERC721("BiNT", "ITM") {}
+    constructor() ERC721("GymNFT", "GN") {}
 
     fallback() external payable {
     }

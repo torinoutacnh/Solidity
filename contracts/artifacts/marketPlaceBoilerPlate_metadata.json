@@ -211,11 +211,11 @@
 	},
 	"sources": {
 		"contracts/Moralis.sol": {
-			"keccak256": "0x461b8eb283004decca256a0094e94f714dc61a0084312d34a74e5b5e9f14c22a",
+			"keccak256": "0x22f2ad5db91ece9fdf5ce1c5942c76a0d8d5c0fe1a21a7569bb57a950206b939",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://183dfb027783215a1bf681684e792bf77d52a02ac1325b7d55e1497db0eab97b",
-				"dweb:/ipfs/QmZVbqHMZGBCPCcpJDCsz5fHnEzzdC6QMtPxWf2h4MHTjQ"
+				"bzz-raw://08203e8f08b65deb06cac20da21706029db8f5ce5275f24510a131f23118e11d",
+				"dweb:/ipfs/QmZQPx3kKKY7farG9ShpdCqXNxvWyBdvQ4eRoJG5uVikgb"
 			]
 		},
 		"github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol": {

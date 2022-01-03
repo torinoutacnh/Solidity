@@ -859,11 +859,11 @@
 			]
 		},
 		"contracts/NFTContract.sol": {
-			"keccak256": "0x0104d3dfa6f88bbccc22de8ab3d9c7bd6e9e2e94842f1f99a135f69f75b88bd4",
+			"keccak256": "0x89cd8d4cb2ed8844c40e184c4dd9e7e67138727aa0137937d28f7a7884615f6c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://79ecaf2bc3d245328969a23ca98c4340ef7d8fb3d0149bebf968ac2f4ee412aa",
-				"dweb:/ipfs/Qmc49g1rA6s4bbHCmStYogEUhmz1xWXraWUzTQ6KpfrYpb"
+				"bzz-raw://3d10fdaac112e537f598a226f78008ff9c4e206d9b35e7a3d4d666c9f382e205",
+				"dweb:/ipfs/QmXW3d7ry7XBUeHMaL4CLmdaTqsPe1mHdX8gaM2mNQm1CK"
 			]
 		},
 		"github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol": {
