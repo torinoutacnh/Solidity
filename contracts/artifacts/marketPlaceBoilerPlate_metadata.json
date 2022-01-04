@@ -181,6 +181,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "sellMarketItem",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -211,11 +224,11 @@
 	},
 	"sources": {
 		"contracts/Moralis.sol": {
-			"keccak256": "0x22f2ad5db91ece9fdf5ce1c5942c76a0d8d5c0fe1a21a7569bb57a950206b939",
+			"keccak256": "0x092ff373715b56862c36e1df4e58fed3987a80467003e3683790991523d0b5b1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://08203e8f08b65deb06cac20da21706029db8f5ce5275f24510a131f23118e11d",
-				"dweb:/ipfs/QmZQPx3kKKY7farG9ShpdCqXNxvWyBdvQ4eRoJG5uVikgb"
+				"bzz-raw://ba77ab390f1d6208ef840adbb5f0ff34e460a77d29dcd445c49862d68f6b4003",
+				"dweb:/ipfs/QmfHHQ2arMW2Gpo1MbK6vAkCs8aNpt5bVWD5MKfKHJKUuW"
 			]
 		},
 		"github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/security/ReentrancyGuard.sol": {

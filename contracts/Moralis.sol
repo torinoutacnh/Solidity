@@ -65,8 +65,9 @@ contract marketPlaceBoilerPlate is ReentrancyGuard {
                 false
             );
             
-            IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
-                
+            //IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
+            IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);    
+
             emit MarketItemCreated(
                 itemId,
                 nftContract,
@@ -116,4 +117,15 @@ contract marketPlaceBoilerPlate is ReentrancyGuard {
         return items;
     }
       
+
+    function sellMarketItem(
+        uint256 tokenId
+        ) public payable nonReentrant {
+            MarketItem memory item = idToMarketItem[tokenId];
+            require(msg.value == item.price, "Please submit the asking price in order to complete the purchase");
+            require(item.sold != true, "This Sale has alredy finnished");
+            IERC721(item.nftContract).transferFrom(address(this), msg.sender, tokenId);    
+
+            emit MarketItemSold(tokenId,msg.sender);
+        }
 }

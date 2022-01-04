@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "log",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/peanutButter.sol": "Jelly"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/peanutButter.sol": {
+			"keccak256": "0xc14e357effb8b7ade572b24f138d322aa80b32a718bad991cad17fc8d11683c4",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f0e8d077e8b0c9dd522674bba195294254ea2c95c8b755e62a5e4f0eb157e981",
+				"dweb:/ipfs/QmNdtS9Q9BZMaTPPWK1MAaJ7kcQsByzgnWWquTCuAokWTj"
+			]
+		}
+	},
+	"version": 1
+}
